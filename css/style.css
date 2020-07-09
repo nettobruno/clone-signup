@@ -1,0 +1,171 @@
+/* Configuração do fundo da tela e posicionamento dos elementos filhos */
+div#background {
+  background: url('../img/bg-intro-desktop.png'), linear-gradient(hsl(0, 100%, 74%),hsl(0, 100%, 74%));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+div#texts h1 {
+  font-size: 3em;
+  line-height: 45px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+div#texts p {
+  color: white;
+  font-weight: 500;
+  width: 90%;
+}
+
+/* Conteúdo ao lado direito */
+div#guestCard{}
+
+div#guestCard div#free {
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px hsla(0, 58%, 55%, 0.6);
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+div#guestCard div#free p > span {
+  font-weight: 700;
+}
+
+div#guestCard form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px hsla(0, 58%, 55%, 0.6);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+div#guestCard form input {
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+div#guestCard form input:focus {
+  color: hsl(249, 10%, 26%);
+  outline-width: 1px;
+  outline-color: hsl(248, 32%, 49%);
+}
+
+::placeholder {
+  color: hsl(248, 7%, 53%);
+  font-weight: 600;
+}
+
+p.txtError {
+  color: hsl(0, 100%, 74%);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  margin-top: -23px;
+  display: none;
+}
+
+#firstNameTxt { 
+  display: block;
+}
+
+#lastNameTxt{
+  display: block;
+}
+
+#emailTxt {
+  display: block;
+}
+
+#passwordTxt {
+  display: block;
+}
+
+div#guestCard form button {
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 5px;
+  color:white;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+div#guestCard form button:hover {
+  background-color: hsl(154, 78%, 57%);
+}
+
+div#guestCard form p.terms {
+  color: hsl(246, 25%, 77%);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+div#guestCard form p > span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+
+/* Estilização para dispositivos menores */
+@media screen and (max-width: 768px) {
+  /* Configuração do fundo da tela e posicionamento dos elementos filhos */
+  div#background {
+    background: url('../img/bg-intro-mobile.png'), linear-gradient(hsl(0, 100%, 74%),hsl(0, 100%, 74%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+  }
+
+  div#texts h1 {
+    font-size: 2.2em;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  div#texts p {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Conteúdo ao lado direito */
+  div#guestCard{
+    margin-top: -50px;
+  }
+
+  div#guestCard form {
+    padding: 20px;
+  }
+
+  div#guestCard form p.terms {
+    text-align: center;
+  }
+}
