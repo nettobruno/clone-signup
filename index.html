@@ -22,22 +22,23 @@
 
       <form>
         <input type="text" id="name" placeholder="First Name">
-        <!-- <p id="firstNameTxt" class="txtError">First Name cannot be empty</p> -->
-        <p class="txtError">First Name cannot be empty</p> 
+        <p id="firstNameTxt" class="txtError visible">First Name cannot be empty</p> 
 
         <input type="text" id="lastName" placeholder="Last Name">
-        <p id="lastNameTxt" class="txtError lastName">Last Name cannot be empty</p>
+        <p id="lastNameTxt" class="txtError visible">Last Name cannot be empty</p>
 
-        <input type="email" id="email" placeholder="Email Address">
-        <p id="emailTxt" class="txtError">Looks like this is not an email</p>
+        <input type="email" id="email" placeholder="Email Address" oninvalid="setCustomValidity(' ')">
+        <p id="emailTxt" class="txtError visible">Looks like this is not an email</p>
 
         <input type="password" id="password" placeholder="Password">
-        <p id="passwordTxt" class="txtError">Password cannot be empty</p>
+        <p id="passwordTxt" class="txtError visible">Password cannot be empty</p>
 
         <button id="button">Claim your free trial </button>
         <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </form>
     </div>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

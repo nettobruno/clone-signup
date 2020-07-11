@@ -79,23 +79,11 @@ p.txtError {
   font-weight: 500;
   text-align: right;
   margin-top: -23px;
-  display: none;
 }
 
-#firstNameTxt { 
-  display: block;
-}
-
-#lastNameTxt{
-  display: block;
-}
-
-#emailTxt {
-  display: block;
-}
-
-#passwordTxt {
-  display: block;
+.visible {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 div#guestCard form button {
